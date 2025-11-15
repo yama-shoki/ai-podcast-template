@@ -18,7 +18,7 @@ export class SlackDataCollector {
       ).toISOString()})`
     );
 
-    // TODO: カスタマイズしてください - チャンネル名を設定可能にする場合は、CUSTOMIZATION.mdを参照
+    // TODO: カスタマイズしてください - チャンネル名を設定可能にする場合は、examples/CUSTOMIZATION.mdを参照
     const messages = await this.fetchChannelMessagesWithRetry(
       channelId,
       oldest,

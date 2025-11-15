@@ -82,10 +82,10 @@ AI-Podcast/
 │       ├── PerformanceMonitor.ts    # パフォーマンス監視
 │       └── retry.ts                 # リトライロジック
 ├── examples/
+│   ├── CUSTOMIZATION.md             # カスタマイズガイド
+│   ├── SLACK_SETUP.md               # Slack App セットアップガイド
 │   └── SAMPLE_SLACK_MESSAGES.md     # テスト用ダミーデータ（30メッセージ）
 ├── .env.example                     # 環境変数サンプル
-├── CUSTOMIZATION.md                 # カスタマイズガイド
-├── SLACK_SETUP.md                   # Slack App セットアップガイド
 ├── package.json
 ├── tsconfig.json
 └── vercel.json                      # Vercel 設定（Cron 含む）
@@ -175,7 +175,7 @@ cp .env.example .env
 
 | 変数名                  | 説明                                | バリデーション          | 取得方法                                                        |
 | ----------------------- | ----------------------------------- | ----------------------- | --------------------------------------------------------------- |
-| `SLACK_BOT_TOKEN`       | Slack Bot Token                     | `xoxb-`で始まる必要あり | [Slack App セットアップガイド](./SLACK_SETUP.md) 参照           |
+| `SLACK_BOT_TOKEN`       | Slack Bot Token                     | `xoxb-`で始まる必要あり | [Slack App セットアップガイド](./examples/SLACK_SETUP.md) 参照           |
 | `SLACK_CHANNEL_SOURCE`  | データ収集元チャンネル ID           | 1 文字以上              | チャンネルを右クリック → 「詳細を表示」→ チャンネル ID をコピー |
 | `SLACK_PODCAST_CHANNEL` | 配信先チャンネル ID                 | 1 文字以上              | 同上                                                            |
 | `OPENAI_API_KEY`        | OpenAI API Key（GPT-4o+TTS）        | `sk-`で始まる必要あり   | [OpenAI Platform](https://platform.openai.com/api-keys)         |
@@ -191,7 +191,7 @@ openssl rand -base64 32
 
 #### 3.4 Slack App のセットアップ
 
-Slack App の作成と Bot Token の取得方法は、**[Slack App セットアップガイド](./SLACK_SETUP.md)** を参照してください。
+Slack App の作成と Bot Token の取得方法は、**[Slack App セットアップガイド](./examples/SLACK_SETUP.md)** を参照してください。
 
 ### 4. ビルド確認
 
@@ -272,7 +272,7 @@ Vercel Dashboard で以下を確認：
 
 ## カスタマイズ
 
-システムをカスタマイズする方法は、**[カスタマイズガイド](./CUSTOMIZATION.md)** を参照してください。
+システムをカスタマイズする方法は、**[カスタマイズガイド](./examples/CUSTOMIZATION.md)** を参照してください。
 
 - 複数チャンネルからデータ収集
 - ポッドキャストタイトルの変更
@@ -305,7 +305,7 @@ Vercel Dashboard で以下を確認：
 
 1. Bot Token が正しいか確認（`xoxb-` で始まる）
 2. Bot が対象チャンネルに追加されているか確認（`/invite @your-bot`）
-3. 必要な権限が付与されているか確認（[SLACK_SETUP.md](./SLACK_SETUP.md) 参照）
+3. 必要な権限が付与されているか確認（[SLACK_SETUP.md](./examples/SLACK_SETUP.md) 参照）
 
 ### OpenAI API エラー
 
@@ -331,6 +331,6 @@ Vercel の無料プランでは関数の実行時間が 60 秒に制限されて
 
 ## 関連ドキュメント
 
-- [Slack App セットアップガイド](./SLACK_SETUP.md) - Slack App の作成方法
-- [カスタマイズガイド](./CUSTOMIZATION.md) - システムのカスタマイズ方法
+- [Slack App セットアップガイド](./examples/SLACK_SETUP.md) - Slack App の作成方法
+- [カスタマイズガイド](./examples/CUSTOMIZATION.md) - システムのカスタマイズ方法
 - [サンプルデータ](./examples/SAMPLE_SLACK_MESSAGES.md) - 動作確認用ダミーデータ

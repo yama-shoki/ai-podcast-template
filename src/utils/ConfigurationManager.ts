@@ -24,7 +24,7 @@ class ConfigurationManagerClass {
     return this.env.SLACK_BOT_TOKEN;
   }
 
-  // TODO: カスタマイズしてください - 複数チャンネルから収集する場合は、CUSTOMIZATION.mdを参照
+  // TODO: カスタマイズしてください - 複数チャンネルから収集する場合は、examples/CUSTOMIZATION.mdを参照
   getSourceChannelId() {
     return this.env.SLACK_CHANNEL_SOURCE;
   }

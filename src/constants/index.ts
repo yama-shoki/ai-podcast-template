@@ -1,7 +1,7 @@
 /**
  * OpenAI API 設定
  * 原稿生成（GPT-4o）と音声生成（TTS）に使用
- * カスタマイズ方法: CUSTOMIZATION.md 参照
+ * カスタマイズ方法: examples/CUSTOMIZATION.md 参照
  */
 export const OPENAI = {
   CHAT: {

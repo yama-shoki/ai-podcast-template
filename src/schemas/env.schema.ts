@@ -4,7 +4,7 @@ export const envSchema = z.object({
   SLACK_BOT_TOKEN: z.string().startsWith("xoxb-", {
     message: "SLACK_BOT_TOKEN must start with 'xoxb-'",
   }),
-  // TODO: カスタマイズしてください - 複数チャンネルから収集する場合は、CUSTOMIZATION.mdを参照
+  // TODO: カスタマイズしてください - 複数チャンネルから収集する場合は、examples/CUSTOMIZATION.mdを参照
   SLACK_CHANNEL_SOURCE: z.string().min(1, {
     message: "SLACK_CHANNEL_SOURCE is required",
   }),

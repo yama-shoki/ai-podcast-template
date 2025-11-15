@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    // Vercel Functions compatibility
+    "target": "ES2020",
+    "module": "ESNext",
+    "lib": ["ES2020"],
+    "moduleResolution": "bundler",
+
+    // Strict type checking
+    "strict": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+
+    // Output
+    "noEmit": false,
+    "outDir": "./dist",
+
+    // Best practices
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true
+  },
+  "include": ["api/**/*", "src/**/*", "scripts/**/*"],
+  "exclude": ["node_modules", ".vercel", "dist"]
+}

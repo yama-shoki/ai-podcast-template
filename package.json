@@ -1,0 +1,45 @@
+{
+  "name": "ai-podcast-generator",
+  "version": "1.0.0",
+  "description": "Automated AI podcast generation system from Slack messages using OpenAI GPT-4o and TTS",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "author": "Yama <radyama0905@gmail.com>",
+  "keywords": [
+    "podcast",
+    "ai",
+    "openai",
+    "slack",
+    "tts",
+    "automation",
+    "vercel"
+  ],
+  "scripts": {
+    "build": "tsc && echo '✅ Build successful!'",
+    "type-check": "tsc --noEmit && echo '✅ Type check passed!'",
+    "test": "vitest run",
+    "test:unit": "vitest run tests/unit",
+    "test:integration": "vitest run tests/integration",
+    "test:e2e": "vitest run tests/e2e",
+    "test:watch": "vitest",
+    "test:local": "bun run scripts/test-local.ts",
+    "lint": "eslint . --ext .ts && echo '✅ Lint passed!'"
+  },
+  "dependencies": {
+    "@ai-sdk/openai": "^1.0.0",
+    "@slack/web-api": "^7.10.0",
+    "ai": "^4.2.0",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node": "^20.0.0",
+    "@vercel/node": "^3.0.0",
+    "typescript": "^5.9.3",
+    "vitest": "^2.0.0",
+    "eslint": "^9.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0"
+  }
+}

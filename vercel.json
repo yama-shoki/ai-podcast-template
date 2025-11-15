@@ -1,0 +1,15 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "fluid": true,
+  "crons": [
+    {
+      "path": "/api/podcast-cron",
+      "schedule": "0 8 * * 5"
+    }
+  ],
+  "functions": {
+    "api/podcast-cron.ts": {
+      "maxDuration": 300
+    }
+  }
+}
